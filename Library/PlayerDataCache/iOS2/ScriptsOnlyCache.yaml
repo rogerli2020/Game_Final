@@ -2,17 +2,20 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - BasicInkExample
+    - BossTriggerBox
     - CameraBehavior
     - Character
     - Damage
     - FixedJoystick
     - GameManager
+    - GhostMob
     - Item
     - MageScript
     - Menu
     - NPCOverlapCircle
     - NextScenes
     - Player
+    - SceneSwitchScript
     - Shangyu_boss
     InkEditor.dll:
     - Ink.UnityIntegration.InkCompiler
@@ -56,10 +59,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -118,8 +119,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: Menu
-    methodName: PlayGame
+    fullTypeName: SceneSwitchScript
+    methodName: JumpToGameScreen
   - assembly: Assembly-CSharp
     fullTypeName: NextScenes
     methodName: nextLevel
@@ -144,6 +145,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: JumpToMainScreen
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitchScript
+    methodName: JumpToMainScreen
   sceneClasses:
     Assets/Christ/Christ's Scenes/DeathScene.unity:
     - Class: 1
@@ -167,25 +171,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1564}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1622}
     - Class: 114
       Script: {instanceID: 2378}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3170}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3548}
+      Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 6188}
     - Class: 114
-      Script: {instanceID: 7126}
+      Script: {instanceID: 7132}
     - Class: 114
-      Script: {instanceID: 7564}
+      Script: {instanceID: 7570}
     - Class: 114
-      Script: {instanceID: 40790}
+      Script: {instanceID: 39364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -230,27 +234,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1564}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1622}
     - Class: 114
       Script: {instanceID: 1898}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3170}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3548}
+      Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 4364}
+      Script: {instanceID: 4368}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 6188}
     - Class: 114
-      Script: {instanceID: 7126}
+      Script: {instanceID: 7132}
     - Class: 114
-      Script: {instanceID: 8062}
+      Script: {instanceID: 8068}
     - Class: 114
-      Script: {instanceID: 8952}
+      Script: {instanceID: 8958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -297,33 +301,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1564}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1622}
     - Class: 114
       Script: {instanceID: 2370}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3170}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3548}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 4364}
+      Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 4368}
     - Class: 114
-      Script: {instanceID: 5244}
+      Script: {instanceID: 4902}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 5248}
     - Class: 114
-      Script: {instanceID: 7126}
+      Script: {instanceID: 6188}
     - Class: 114
-      Script: {instanceID: 8062}
+      Script: {instanceID: 7132}
     - Class: 114
-      Script: {instanceID: 8276}
+      Script: {instanceID: 8068}
     - Class: 114
-      Script: {instanceID: 8952}
+      Script: {instanceID: 8282}
+    - Class: 114
+      Script: {instanceID: 8958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -331,6 +337,73 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Christ/Christ's Scenes/Win.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1566}
+    - Class: 114
+      Script: {instanceID: 1622}
+    - Class: 114
+      Script: {instanceID: 2932}
+    - Class: 114
+      Script: {instanceID: 3034}
+    - Class: 114
+      Script: {instanceID: 3174}
+    - Class: 114
+      Script: {instanceID: 3552}
+    - Class: 114
+      Script: {instanceID: 6188}
+    - Class: 114
+      Script: {instanceID: 7132}
+    - Class: 114
+      Script: {instanceID: 7570}
+    - Class: 114
+      Script: {instanceID: 39488}
+    - Class: 114
+      Script: {instanceID: 39490}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -384,7 +457,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1568}
+      Script: {instanceID: 1622}
     - Class: 114
       Script: {instanceID: 2252}
     - Class: 114
@@ -392,35 +465,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2378}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2868}
     - Class: 114
-      Script: {instanceID: 3026}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3170}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3548}
+      Script: {instanceID: 3174}
     - Class: 114
-      Script: {instanceID: 3782}
+      Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 4198}
+      Script: {instanceID: 3786}
     - Class: 114
-      Script: {instanceID: 5094}
+      Script: {instanceID: 4202}
     - Class: 114
-      Script: {instanceID: 5102}
+      Script: {instanceID: 5098}
     - Class: 114
-      Script: {instanceID: 5948}
+      Script: {instanceID: 5106}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5708}
     - Class: 114
-      Script: {instanceID: 6528}
+      Script: {instanceID: 5954}
     - Class: 114
-      Script: {instanceID: 7518}
+      Script: {instanceID: 5978}
     - Class: 114
-      Script: {instanceID: 7564}
+      Script: {instanceID: 6534}
     - Class: 114
-      Script: {instanceID: 7814}
+      Script: {instanceID: 7524}
     - Class: 114
-      Script: {instanceID: 8132}
+      Script: {instanceID: 7570}
+    - Class: 114
+      Script: {instanceID: 7820}
+    - Class: 114
+      Script: {instanceID: 8138}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -450,12 +527,6 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -472,6 +543,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: c24a778d9aa393e11e54bff320ca63de
@@ -576,7 +653,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 1f351c55a182ebccc00072125d90bff1
+      Hash: e7c85feabea159a0da244dc8a72fbb16
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -642,6 +719,12 @@ ScriptsOnlyBuild:
     className: UnityOnBecameVisibleMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 62e040979f1bcc5cfdb183bf34b809bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossTriggerBox
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -682,6 +765,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Character
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneSwitchScript
   - hash:
       serializedVersion: 2
       Hash: ba62abe34655d7e7cd27c0bf1fa1b39d
@@ -1090,6 +1179,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 5310fd82cc289defb4dd883b49cfe683
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GhostMob
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1684,4 +1779,5 @@ ScriptsOnlyBuild:
   - Assets/Christ/Christ's Scenes/Intro.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Christ/Christ's Scenes/DeathScene.unity
-  playerPath: /Users/enhanli/Desktop/FinalBuild2
+  - Assets/Christ/Christ's Scenes/Win.unity
+  playerPath: /Users/enhanli/Desktop/iOS-Build

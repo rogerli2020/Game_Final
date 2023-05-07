@@ -326,6 +326,10 @@
 -r:"/Users/enhanli/FinalPrototype/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/Unity.InputSystem.TestFramework.ref.dll"
+-r:"Library/Bee/artifacts/900b0aE.dag/UnityEditor.TestRunner.ref.dll"
+-r:"Library/Bee/artifacts/900b0aE.dag/UnityEditor.UI.ref.dll"
+-r:"Library/Bee/artifacts/900b0aE.dag/UnityEngine.TestRunner.ref.dll"
+-r:"Library/Bee/artifacts/900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/com.unity.inputsystem@1.5.1/Tests/IntegrationTests/IntegrationTests.cs"
 -langversion:9.0
 
