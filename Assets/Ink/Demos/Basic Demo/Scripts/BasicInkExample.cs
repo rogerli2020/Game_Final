@@ -50,7 +50,6 @@ public class BasicInkExample : MonoBehaviour {
 
 			// Display the text on screen!
 			//CreateContentView(text);
-			talkingSoundEffect.Play();
 			dialogueTextField.text = text;
 			dialogueOverview.Add(text);
 		}
@@ -79,6 +78,7 @@ public class BasicInkExample : MonoBehaviour {
 
 	// When we click the choice button, tell the story to choose that choice!
 	void OnClickChoiceButton (Choice choice) {
+		talkingSoundEffect.Play();
 		story.ChooseChoiceIndex (choice.index);
 		RefreshView();
 	}

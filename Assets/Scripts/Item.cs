@@ -15,6 +15,8 @@ public class Item : MonoBehaviour
 
     private SpriteRenderer _sr;
 
+    private float initialXScale;
+
     public void ChangeItemId(string newId)
     {
         itemId = newId;
@@ -53,6 +55,7 @@ public class Item : MonoBehaviour
     private void Start()
     {
         _sr = gameObject.GetComponent<SpriteRenderer>();
+        initialXScale = transform.localScale.x;
         SetSprite(itemId);
         StartCoroutine(WaitForCollidable());
     }
@@ -63,5 +66,15 @@ public class Item : MonoBehaviour
         yield return new WaitForSeconds(collidableAfter);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+    }
+
+    private bool adding = false;
+    private void FixedUpdate()
+    {
+        // minecraft-esque item rotating movement.
+        if (transform.localScale.x >= initialXScale) adding = false;
+        if (transform.localScale.x <= -initialXScale) adding = true;
+        float newXScale = transform.localScale.x + (initialXScale / 50) * (adding ? 1 : -1);
+        transform.localScale = new Vector3(newXScale, transform.localScale.y, transform.localScale.z);
     }
 }
