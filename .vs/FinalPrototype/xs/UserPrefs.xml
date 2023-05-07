@@ -5,7 +5,7 @@
       <File FileName="Assets/Scripts/GameManager.cs" Line="341" Column="46" />
       <File FileName="Assets/Scripts/Character.cs" Line="144" Column="10" />
       <File FileName="Assets/TextAssets/mage2Ready.json" Line="1" Column="17" />
-      <File FileName="Assets/Scripts/GhostMob.cs" Line="40" Column="1" />
+      <File FileName="Assets/Scripts/GhostMob.cs" Line="22" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
