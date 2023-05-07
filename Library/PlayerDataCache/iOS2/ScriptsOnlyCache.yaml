@@ -28,7 +28,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -63,10 +62,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -195,7 +192,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7570}
     - Class: 114
-      Script: {instanceID: 39364}
+      Script: {instanceID: 39150}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -398,9 +395,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7570}
     - Class: 114
-      Script: {instanceID: 39488}
+      Script: {instanceID: 39274}
     - Class: 114
-      Script: {instanceID: 39490}
+      Script: {instanceID: 39276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
