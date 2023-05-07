@@ -133,17 +133,26 @@ public class Character : MonoBehaviour
         if (deathSound != null) deathSound.Play();
 
         // destroy self after 3 sex.
-        Destroy(gameObject, 3.0f);
+        Destroy(gameObject, 4.0f);
 
         if (gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("DeathScene");
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 20;
+            //SceneManager.LoadScene("DeathScene");
+            StartCoroutine(LoadLevelAfterDelay(3f, "DeathScene"));
         }
 
         if (gameObject.tag == "Boss")
         {
-            SceneManager.LoadScene("Win");
+            //SceneManager.LoadScene("Win");
+            StartCoroutine(LoadLevelAfterDelay(3f, "Win"));
         }
+    }
+
+    IEnumerator LoadLevelAfterDelay(float delay, string level)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(level);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
