@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Christ/Christ's Scenes/MainScreen.unity
+    guid: d3982f3b46986469491876362cbdacdc
+  - enabled: 1
+    path: Assets/Christ/Christ's Scenes/Intro.unity
+    guid: da211d8173a424dec9b80076866e9db9
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Christ/Christ's Scenes/DeathScene.unity
+    guid: a69f21fb7f38d4985ae1296b162eb54b
+  - enabled: 1
+    path: Assets/Christ/Christ's Scenes/Win.unity
+    guid: e600060e4452a43378d506543fac0678
+  m_configObjects: {}

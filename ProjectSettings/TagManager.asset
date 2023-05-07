@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ITEM
+  - DAMAGE_RANGE
+  - NPC
+  - GHOST
+  - GameManager
+  - Boss
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3370506947
+    locked: 0
+  - name: background2
+    uniqueID: 2019100793
+    locked: 0
+  - name: background3
+    uniqueID: 1009905999
+    locked: 0
+  - name: Objects
+    uniqueID: 2806038463
+    locked: 0
+  - name: Objects2
+    uniqueID: 808711301
+    locked: 0
+  - name: NPCs
+    uniqueID: 2139294431
+    locked: 0
+  - name: Player
+    uniqueID: 3528411189
+    locked: 0
